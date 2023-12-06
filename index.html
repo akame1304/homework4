@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Handler</title>
+  </head>
+  <body>
+    <header>
+      <h1>HOMEWORK 4</h1>
+    </header>
+    <section>
+      <label for="var1">Number of istances:</label>
+      <input type="text" id="var1" value="1000" />
+      <label for="var2">Number of steps</label>
+      <input type="text" id="var2"  value="60" />
+      <label for="var3">Number of steps</label>
+      <input type="text" id="var3" value="0.5" />
+
+      <button onclick="GraphHandler()">activate</button>
+    </section>
+
+    <canvas id="pictureBox1" width="1000" height="1000"> </canvas>
+    <canvas id="pictureBox2" width="1000" height="1000"> </canvas>
+    <canvas id="pictureBox3" width="1000" height="1000"> </canvas>
+    <canvas id="pictureBox4" width="1000" height="1000"> </canvas>
+
+    <script src="./Adversary.js"></script>
+    <script src="./Histogram.js"></script>
+    <script src="./LineChart.js"></script>
+
+    <script>
+         let var1 = document.getElementById("var1");
+      let var2 = document.getElementById("var2");
+      let var3 = document.getElementById("var3");
+      
+      function GraphHandler() {
+        this.isDragging = false;
+        this.graphBitmap = null;
+
+        // Genera gli attacchi
+        var adv = new Adversary(var1.value, var2.value, var3.value);
+        adv.generateAttacks();
+
+        // Recupera i dati
+        var data1 = adv.getLineChart1AttackList();
+        var data2 = adv.getLineChart2AttackList();
+        var data3 = adv.getLineChart3AttackList();
+        var data4 = adv.getLineChart4AttackList();
+
+        var chart1 = new LineChart(document.getElementById("pictureBox1"));
+        chart1.drawChart(data1);
+
+        var chart2 = new LineChart(document.getElementById("pictureBox2"));
+        chart2.drawChart(data2);
+
+        var chart3 = new LineChart(document.getElementById("pictureBox3"));
+        chart3.drawChartCont(data3);
+
+        var chart4 = new LineChart(document.getElementById("pictureBox4"));
+        chart4.drawChartCont(data4);
+
+        var k = 20;
+        var histogramDistChart1 = adv.createHistoDistrib(data1, k);
+        var histogramDistChart2 = adv.createHistoDistrib(data2, k);
+        var histogramDistChart3 = adv.createHistoDistribFloat(data3, k);
+        var histogramDistChart4 = adv.createHistoDistribFloat(data4, k);
+
+        var histogram1 = new Histogram(chart1, histogramDistChart1, k, "");
+        var histogram2 = new Histogram(chart2, histogramDistChart2, k, "");
+        var histogram3 = new Histogram(chart3, histogramDistChart3, k, "c");
+        var histogram4 = new Histogram(chart4, histogramDistChart4, k, "c");
+      }
+
+      // Simulate Form1_Load event
+      window.onload = function () {
+        GraphHandler();
+      };
+    </script>
+  </body>
+</html>
