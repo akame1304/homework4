@@ -1,0 +1,10 @@
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\bin\Debug\homework4_Csh.exe.config
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\bin\Debug\homework4_Csh.exe
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\bin\Debug\homework4_Csh.pdb
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.csproj.AssemblyReference.cache
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.Form1.resources
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.Properties.Resources.resources
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.csproj.GenerateResource.cache
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.csproj.CoreCompileInputs.cache
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.exe
+C:\Users\simon\Documents\GitHub\Statistics\trunk\homework4_Csh\homework4_Csh\obj\Debug\homework4_Csh.pdb
